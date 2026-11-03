@@ -1,0 +1,21 @@
+{
+  "name": "rook-cli",
+  "displayName": "Rook CLI",
+  "description": "Test, evaluate and red-team AI agents that act with Rook CLI by TestMu AI: the rook skill drives the rook CLI through setup, profiles, credit budgets, runs, CI and evidence-based verdicts.",
+  "author": {
+    "name": "TestMu AI",
+    "url": "https://www.testmuai.com/rook-cli/"
+  },
+  "homepage": "https://www.testmuai.com/rook-cli/?utm_source=rook-plugin&utm_medium=plugin&utm_campaign=rook-cli&utm_content=homepage",
+  "repository": "https://github.com/LambdaTest/rook",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-assurance",
+    "agent-testing",
+    "ai-agents",
+    "evals",
+    "red-teaming",
+    "llm-evaluation",
+    "testing"
+  ]
+}

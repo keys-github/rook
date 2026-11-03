@@ -1,0 +1,22 @@
+{
+  "name": "rook",
+  "owner": {
+    "name": "TestMu AI",
+    "url": "https://github.com/LambdaTest"
+  },
+  "description": "Rook CLI by TestMu AI (Agent Assurance): the rook skill for testing AI agents that act.",
+  "plugins": [
+    {
+      "name": "rook-cli",
+      "source": "./plugins/rook-cli",
+      "description": "Test, evaluate and red-team AI agents that act with Rook CLI by TestMu AI: the rook skill drives the rook CLI through setup, profiles, credit budgets, runs, CI and evidence-based verdicts.",
+      "category": "testing",
+      "tags": [
+        "agent-testing",
+        "agent-assurance",
+        "evals",
+        "red-teaming"
+      ]
+    }
+  ]
+}

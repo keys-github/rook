@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-# The skill has one canonical copy, skill-installer/skills/, and two mirrors
-# that Claude Code (.claude/skills/rook) and Codex CLI (.agents/skills/rook)
-# pick up from a clone. kane-cli keeps the same three copies in sync by hand;
+# The skill has one canonical copy, skill-installer/skills/, and three mirrors:
+# Claude Code (.claude/skills/rook) and Codex CLI (.agents/skills/rook) pick
+# them up from a clone, and the plugin ships plugins/rook-cli/skills/rook.
+# kane-cli keeps its copies in sync by hand;
 # this harness makes a drifted mirror a red run instead of a silent one.
 #
 # It also checks the two frontmatter facts a harness can check: the skill is
@@ -12,7 +13,7 @@ set -uo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 CANON="$REPO_ROOT/skill-installer/skills"
-MIRRORS=("$REPO_ROOT/.claude/skills/rook" "$REPO_ROOT/.agents/skills/rook")
+MIRRORS=("$REPO_ROOT/.claude/skills/rook" "$REPO_ROOT/.agents/skills/rook" "$REPO_ROOT/plugins/rook-cli/skills/rook")
 
 FAIL=0
 pass() { echo "PASS: $1"; }

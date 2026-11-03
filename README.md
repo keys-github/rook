@@ -17,6 +17,7 @@ Catch failures and vulnerabilities before they ship.
 [![npm](https://img.shields.io/npm/v/@testmuai/rook?label=npm&logo=npm&color=cb3837)](https://www.npmjs.com/package/@testmuai/rook)
 [![npm downloads](https://img.shields.io/npm/dm/@testmuai/rook?label=downloads&color=cb3837)](https://www.npmjs.com/package/@testmuai/rook)
 [![Coding-agent skill](https://img.shields.io/npm/v/@testmuai/rook-skill?label=skill&color=6e40c9)](#for-ai-coding-agents-reading-this)
+[![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-d97757)](#for-ai-coding-agents-reading-this)
 [![Homebrew](https://img.shields.io/badge/homebrew-lambdatest%2Frook-fbb040?logo=homebrew&logoColor=white)](https://github.com/LambdaTest/homebrew-rook)
 [![Tests](https://github.com/LambdaTest/rook/actions/workflows/test-scripts.yml/badge.svg?branch=main)](https://github.com/LambdaTest/rook/actions/workflows/test-scripts.yml)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
@@ -249,6 +250,15 @@ npx @testmuai/rook-skill
 ```
 
 This installs the skill user-wide for Claude Code, Codex and Gemini CLI. See the [installer guide](skill-installer/README.md) for client selection, updates, uninstall and file protections.
+
+Or add it as a Claude Code plugin:
+
+```text
+/plugin marketplace add LambdaTest/rook
+/plugin install rook-cli@rook
+```
+
+The skill then answers to `/rook-cli:rook`, and to `/rook` unless another command already uses that name.
 
 Then open your agent repository and ask: _"Use rook to test my agent against its refund policy."_ Approve the target's real actions and credit spend before execution. See the [CI recipe](skill-installer/skills/references/ci.md) for completion and verdict checks; an exit code of `0` alone does not mean scenarios passed.
 

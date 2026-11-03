@@ -1,7 +1,7 @@
 {
   "name": "@testmuai/rook-skill",
   "version": "0.1.0",
-  "description": "Install the Rook agent-testing skill for Claude Code, Codex and Gemini CLI",
+  "description": "Install the rook skill (Rook CLI by TestMu AI) for Claude Code, Codex and Gemini CLI: test, evaluate and red-team AI agents that act",
   "type": "module",
   "bin": { "rook-skill": "./cli.js" },
   "files": ["cli.js", "lib", "skills", "LICENSE"],
@@ -15,5 +15,5 @@
     "directory": "skill-installer"
   },
   "publishConfig": { "access": "public" },
-  "keywords": ["rook", "agent-skills", "agent-testing", "claude-code", "codex", "gemini-cli"]
+  "keywords": ["rook", "rook-cli", "agent-skills", "agent-testing", "agent-assurance", "ai-agent-testing", "red-teaming", "llm-evaluation", "claude-code", "codex", "gemini-cli"]
 }

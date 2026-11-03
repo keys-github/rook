@@ -32,8 +32,9 @@ welcome as pull requests.
 
 **The coding-agent skill.** `skill-installer/skills/SKILL.md` and its
 `references/` are the single source of truth for how an AI coding agent
-drives `rook`; `.claude/skills/rook/` and `.agents/skills/rook/` are
-generated mirrors. Edit the canonical copy, run
+drives `rook`; `.claude/skills/rook/`, `.agents/skills/rook/` and
+`plugins/rook-cli/skills/rook/` are generated mirrors. Edit the canonical
+copy, run
 `scripts/sync-skill-mirrors.sh`, and keep `scripts/test-skill-mirrors.sh`
 and `SKILL_FLAGS_SELFTEST=1 scripts/test-skill-flags.sh` green. Run
 `scripts/test-skill-contract.sh` (bash, Python 3 and jq) for the offline CI
