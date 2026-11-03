@@ -1,9 +1,11 @@
 <div align="center">
 
+<a href="https://www.testmuai.com/rook-cli/?utm_source=github&utm_medium=readme&utm_campaign=rook-cli&utm_content=masthead">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/rook-mascot-dark.gif">
-  <img src=".github/assets/rook-mascot-light.gif" alt="rook, the chess-piece mascot" width="200">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/LambdaTest/rook/main/.github/assets/rook-mascot-dark.gif">
+  <img src="https://raw.githubusercontent.com/LambdaTest/rook/main/.github/assets/rook-mascot-light.gif" alt="rook, the chess-piece mascot" width="200">
 </picture>
+</a>
 
 # rook
 
@@ -13,20 +15,24 @@ Perform End-to-End (E2E) testing of your AI agents to validate how they actually
 Catch failures and vulnerabilities before they ship.
 
 [![npm](https://img.shields.io/npm/v/@testmuai/rook?label=npm&logo=npm&color=cb3837)](https://www.npmjs.com/package/@testmuai/rook)
+[![npm downloads](https://img.shields.io/npm/dm/@testmuai/rook?label=downloads&color=cb3837)](https://www.npmjs.com/package/@testmuai/rook)
+[![Coding-agent skill](https://img.shields.io/npm/v/@testmuai/rook-skill?label=skill&color=6e40c9)](#for-ai-coding-agents-reading-this)
 [![Homebrew](https://img.shields.io/badge/homebrew-lambdatest%2Frook-fbb040?logo=homebrew&logoColor=white)](https://github.com/LambdaTest/homebrew-rook)
 [![Tests](https://github.com/LambdaTest/rook/actions/workflows/test-scripts.yml/badge.svg?branch=main)](https://github.com/LambdaTest/rook/actions/workflows/test-scripts.yml)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
 ![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-brightgreen)
 
-[Install](#install) · [Quick start](#quick-start) · [User guide](docs/user-guide/README.md) · [Samples](#sample-agents) · [Documentation](https://www.testmuai.com/support/docs/agent-assurance-overview/?utm_source=github&utm_medium=listing&utm_campaign=marketplace)
+[Install](#install) · [Free trial](https://www.testmuai.com/register/?redirectTo=https://rook.lambdatest.com/projects&utm_source=github&utm_medium=readme&utm_campaign=rook-cli&utm_content=nav) · [Quick start](#quick-start) · [User guide](docs/user-guide/README.md) · [Samples](#sample-agents) · [Documentation](https://www.testmuai.com/support/docs/agent-assurance-overview/?utm_source=github&utm_medium=readme&utm_campaign=rook-cli&utm_content=nav)
 
-<sub>Built by <a href="https://www.testmuai.com/agent-assurance/?utm_source=github&utm_medium=listing&utm_campaign=marketplace">TestMu AI</a> (formerly LambdaTest)</sub>
+<sub>Rook CLI is <a href="https://www.testmuai.com/agent-assurance/?utm_source=github&utm_medium=readme&utm_campaign=rook-cli&utm_content=byline">Agent Assurance by TestMu AI</a></sub>
 
 </div>
 
 ```bash
 npm install -g @testmuai/rook@latest
 ```
+
+[![Start Free Trial: 14 days, 4,000 credits](https://img.shields.io/badge/Start%20Free%20Trial-14%20days%20%C2%B7%204%2C000%20credits-e8a33d?style=for-the-badge)](https://www.testmuai.com/register/?redirectTo=https://rook.lambdatest.com/projects&utm_source=github&utm_medium=readme&utm_campaign=rook-cli&utm_content=button)
 
 ```text
 $ rook                  # from inside a project that contains an agent
@@ -94,7 +100,7 @@ Most eval and observability tools score what your agent said and recorded. `rook
 
 ## Install
 
-You need a TestMu AI (formerly LambdaTest) account with an Agent Assurance plan; without one, Rook refuses before any model call or credit spend and links to the billing page. Exploring, generating, writing profiles and running spend Agent Assurance credits. On a plan without Rook cloud, such as Starter, Rook works on your machine: `rook sync` is refused with a link to upgrade, and `rook run` keeps its results local.
+You need a TestMu AI account with an Agent Assurance plan or the free trial below. `rook` checks the plan before any model call or credit spend, and without one it refuses and links to the page that lifts the refusal. Exploring, generating, writing profiles and running spend Agent Assurance credits. On a plan without Rook cloud, such as Starter, `rook` works on your machine: `rook sync` is refused with a link to upgrade, and `rook run` keeps its results local.
 
 Homebrew and the shell installer cover macOS and Linux on x64 and arm64, and bring their own runtime, so they need no Node. npm also covers Windows x64; it needs Node.js 20 or newer to install and launch, then runs `rook` on its bundled runtime.
 
@@ -118,6 +124,8 @@ curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | b
 npm install -g @testmuai/rook@latest
 ```
 
+**Then start the free trial.** A new organization gets 14 days with 4,000 credits and the Pro features: [Start Free Trial](https://www.testmuai.com/register/?redirectTo=https://rook.lambdatest.com/projects&utm_source=github&utm_medium=readme&utm_campaign=rook-cli&utm_content=install). An organization with sub-organizations is not offered a trial and gets its plan through its admin. Plans for after the trial are on the [pricing page](https://www.testmuai.com/pricing/?product=agent-assurance&utm_source=github&utm_medium=readme&utm_campaign=rook-cli&utm_content=install).
+
 **Upgrade and uninstall** — `rook update` checks for a newer release and installs it through the channel you installed with (Homebrew, the shell installer or npm); run `rook` again afterwards.
 
 | Installed with  | Upgrade                                | Uninstall                                        |
@@ -131,6 +139,16 @@ Uninstalling leaves your sign-in and settings in `~/.testmuai/rook/`; delete tha
 Driving rook from Claude Code, Codex or Gemini CLI? Add the [coding-agent skill](#for-ai-coding-agents-reading-this) too. If an install method does not work on your platform, [open an issue](https://github.com/LambdaTest/rook/issues/new/choose).
 
 ## Quick start
+
+**No agent of your own yet?** Start with [`triage-service`](samples/triage-service): a small HTTP agent with in-memory tickets, no model key, and real defects for a good suite to find. It needs Node.js and Git.
+
+```bash
+git clone --depth 1 --filter=blob:none --sparse https://github.com/LambdaTest/rook.git rook-samples
+cd rook-samples && git sparse-checkout set samples/triage-service
+cd samples/triage-service && npm start    # listens on http://127.0.0.1:9110
+```
+
+Leave it running and open a second terminal in the same folder. The session below follows that sample; your counts will differ.
 
 From inside a project that contains an agent, start `rook`. The first time, sign in through the browser and pick or create the project your work is filed under:
 
@@ -253,7 +271,7 @@ For client details, see the [Claude Code skill documentation](https://code.claud
 
 </details>
 
-Rook is also listed on the TestMu AI [Agent Skills](https://www.testmuai.com/support/docs/agent-skills/) page and in the [LambdaTest/agent-skills](https://github.com/LambdaTest/agent-skills) catalog.
+rook is also listed on the TestMu AI [Agent Skills](https://www.testmuai.com/support/docs/agent-skills/?utm_source=github&utm_medium=readme&utm_campaign=rook-cli&utm_content=skills) page and in the [LambdaTest/agent-skills](https://github.com/LambdaTest/agent-skills) catalog.
 
 ## Sample agents
 
@@ -269,6 +287,8 @@ Try the agents in [`samples/`](samples), from a small HTTP service to eight indu
 | [`industry-agents`](samples/industry-agents)           | Banking, healthcare, insurance and customer support, each with Developer/QE editions, diagrams, native Rook workspaces, recorded evidence and a headless CI runner.          |
 
 The business records are fictional. Rook evaluation uses your account and credits. See [`samples/README.md`](samples/README.md) for how to run each one and what it should catch.
+
+To look at real verdicts before you sign up, [`industry-agents`](samples/industry-agents) keeps recorded runs with their evidence in each edition's `.testmuai` folder. You can read them on GitHub, or [replay the saved results without credentials](samples/industry-agents#replay-the-saved-results-without-credentials) (Node.js 22 or later; a replay re-checks the recorded decisions and does not run a new evaluation).
 
 ## Where things are kept
 
@@ -299,10 +319,10 @@ Judges are told to verify without changing anything — calling `issue_refund` t
 - **Bugs and feature requests** — [open an issue](https://github.com/LambdaTest/rook/issues/new/choose). Verdicts you disagree with are the most useful reports we get.
 - **Security** — do not open a public issue. See [SECURITY.md](SECURITY.md).
 - **Contributing** — see [CONTRIBUTING.md](CONTRIBUTING.md).
-- **Documentation** — [TestMu AI Agent Assurance](https://www.testmuai.com/support/docs/agent-assurance-overview/).
+- **Documentation** — [TestMu AI Agent Assurance](https://www.testmuai.com/support/docs/agent-assurance-overview/?utm_source=github&utm_medium=readme&utm_campaign=rook-cli&utm_content=support).
 - **Reviews** — rook is listed on [agent.reviews](https://agent.reviews), where coding agents review the tools they use after real tasks. To let your agent do the same, see [agent.reviews/install](https://agent.reviews/install).
 
 <div align="center">
 <br>
-<sub>Licensed under <a href="LICENSE">Apache 2.0</a> · Made by <a href="https://www.testmuai.com">TestMu AI</a></sub>
+<sub>Licensed under <a href="LICENSE">Apache 2.0</a> · Made by <a href="https://www.testmuai.com/?utm_source=github&utm_medium=readme&utm_campaign=rook-cli&utm_content=footer">TestMu AI</a></sub>
 </div>
